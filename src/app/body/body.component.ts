@@ -96,14 +96,14 @@ export class BodyComponent implements AfterViewInit, OnDestroy {
       opacity: 1,
       duration: 1,
       ease: 'power1.out'
-    }, 'logoInPlace+=0') // Inicia cuando la sombra ya es visible
+    }, 'logoInPlace+=0.5') // Inicia cuando la sombra ya es visible
       .addLabel('h1Visible', '>');
 
     // PASO 2.4: El H1 se encoge a su tamaño final.
     tl.to(this.startupContent.nativeElement, {
       scale: 1,
       top: 0,
-      duration: 3,
+      duration: 2,
       ease: 'power2.inOut'
     }, 'h1Visible')
       .addLabel('shrinkH1', '<'); // Etiqueta para el INICIO del encogimiento
@@ -122,9 +122,9 @@ export class BodyComponent implements AfterViewInit, OnDestroy {
     tl.to(this.namesContainer.nativeElement, {
       opacity: 1,
       y: -100,
-      duration: 3,
+      duration: 2,
       ease: 'power2.out'
-    }, 'shrinkH1+=2.5'); // Empieza a la mitad de la animación de la sombra/H1
+    }, 'shrinkH1+=1.5'); // Empieza a la mitad de la animación de la sombra/H1
 
     // PASO 2.6: La capa de la sombra (que ahora es casi transparente) se desvanece por completo.
     tl.to(this.startupShadow.nativeElement, {
