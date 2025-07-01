@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "triadev_prueba_v2": {
+    "triadev_prueba": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/triadev_prueba_v2",
+            "outputPath": "dist/triadev_prueba",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -24,7 +24,8 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/assets"
             ],
             "styles": [
               "src/styles.css"
@@ -59,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "triadev_prueba_v2:build:production"
+              "buildTarget": "triadev_prueba:build:production"
             },
             "development": {
-              "buildTarget": "triadev_prueba_v2:build:development"
+              "buildTarget": "triadev_prueba:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +83,8 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/assets"
             ],
             "styles": [
               "src/styles.css"
